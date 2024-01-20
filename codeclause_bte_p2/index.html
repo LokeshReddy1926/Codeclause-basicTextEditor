@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TextEditor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="Javascript.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Text Editor</h1>
+      </div>
+      <div class="text-editor">
+        <div class="menu">
+          <div class="text-format">
+            <button id="bold_btn" onclick="bold()" ondblclick="boldrm()">
+              <strong>B</strong>
+            </button>
+            <button id="italic_btn" onclick="italic()" ondblclick="italicrm()">
+              <em>I</em>
+            </button>
+            <button
+              id="underline_btn"
+              onclick="underline()"
+              ondblclick="underlinerm()"
+            >
+              <u>U</u>
+            </button>
+          </div>
+          <div class="font-size">
+            <input
+              type="number"
+              name="font-size"
+              id="font-size"
+              placeholder="Font Size"
+              onchange="fontSize()"
+            />
+          </div>
+          <div class="text-align">
+            <button id="left_align_btn" onclick="left()">
+              <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button id="center_align_btn" onclick="center()">
+              <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button id="right_align_btn" onclick="right()">
+              <i class="fa-solid fa-align-right"></i>
+            </button>
+          </div>
+          <div class="font-family">
+            <select
+              name="font_families"
+              id="font_families"
+              value="Font Styles"
+              onchange="font_style()"
+            >
+              <option value="sans-serif" disabled selected>Font Styles</option>
+              <option value="Arial, Helvetica, sans-serif">Arial</option>
+              <option value="Georgia, serif">Georgia</option>
+              <option value="Courier New, Courier, monospace">
+                Courier New
+              </option>
+            </select>
+          </div>
+          <div class="text-transform">
+            <button id="upper_btn" onclick="upper()" ondblclick="upperrm()">
+              Upper
+            </button>
+            <button id="lower_btn" onclick="lower()" ondblclick="lowerrm()">
+              Lower
+            </button>
+          </div>
+          <div class="clear-text">
+            <button id="clear_btn" onclick="clear_txt()">Clear Text</button>
+          </div>
+        </div>
+        <div class="text-area">
+          <textarea
+            name="text"
+            id="text"
+            placeholder="Your Text Here"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
